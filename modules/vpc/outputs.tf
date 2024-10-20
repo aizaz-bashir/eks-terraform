@@ -1,0 +1,19 @@
+output "private_subnets" {
+  description = "List of IDs of private subnets"
+  value       = module.vpc.private_subnets
+}
+
+output "public_subnets" {
+  description = "List of IDs of public subnets"
+  value       = module.vpc.public_subnets
+}
+
+output "vpc_id" {
+  description = "The ID of the VPC"
+  value       = module.vpc.vpc_id
+}
+
+output "eks_security_group_id" {
+  description = "ID of the security group for EKS"
+  value       = aws_security_group.eks_security_group.id
+}
